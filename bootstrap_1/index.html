@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Online Store</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <h1 class="text-center my-4">My Online Store</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="ScreenShot2020-03-20at3.27.54PM_704x.png.webp" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+              <h5 class="card-title">12 Strawberry Donuts</h5>
+              <p class="card-text">$15.00</p>
+              <button class="btn btn-primary" onclick="addToCart('12 Strawberry Donuts', 15.00, 'ScreenShot2020-03-20at3.27.54PM_704x.png.webp')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Donuts-with-chocolate-glaze.jpg" class="card-img-top" alt="15 Chocolate donuts">
+            <div class="card-body">
+              <h5 class="card-title">15 Chocolate Donuts</h5>
+              <p class="card-text">$20.00</p>
+              <button class="btn btn-primary" onclick="addToCart('15 Chocolate Donuts', 20.00, 'Donuts-with-chocolate-glaze.jpg')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Chocolate-Milkshake-Recipe-11.jpg" class="card-img-top" alt="2 Chocolate Milkshakes">
+            <div class="card-body">
+              <h5 class="card-title">2 Chocolate Milkshakes</h5>
+              <p class="card-text">$10.00</p>
+              <button class="btn btn-primary" onclick="addToCart('2 Chocolate Milkshakes', 10.00, 'Chocolate-Milkshake-Recipe-11.jpg')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h2>Shopping Cart</h2>
+        <div id="cart"></div>
+        <p><strong>Total: $</strong><span id="total">0.00</span></p>
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

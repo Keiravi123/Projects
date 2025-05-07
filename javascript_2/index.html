@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Planner</title>
+    <link href="styles.css" rel="stylesheet">
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',  
+                includedLanguages: 'en,es,fr,de,it',  
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body onload="initialize()">
+    <h1 id="main-title" class="example-class">
+        <i>｡･:*˚:✧｡｡･:*˚:✧｡˚ ༘♡ ⋆｡˚¡My planner!!!˚ ༘♡ ⋆｡˚｡･:*˚:✧｡｡･:*˚:✧｡</i>
+        <button id="changeStyleBtn">Press me!!!😸</button>
+
+    </h1>
+
+
+    <div id="google_translate_element" style="position: absolute; right: 10px; top: 10px;"></div>
+
+    <div>
+        <nav class="nav1">
+            <ul>
+                <li><a href="Tommy.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content" onmouseover="highlightText()">        
+        <ul>              
+            <li><a href="Tommy.html">Tommy</a></li>         
+        </ul>       
+        <p class="description">This is some information</p>
+        <p id="dynamicText">change color</p>     
+    </div>   
+    
+    <button id="startTimerBtn">Start time</button>
+    <button id="stopTimerBtn">Stop time</button> 
+    <div id="demo"></div>
+    <button id="clickButton">Press me!</button>    
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Autor: Camila Vila</p>
+        <p>&copy; 2025 Camila's Website</p>
+    </footer>
+
+    <script type="text/javascript">
+        document.getElementById('language-selector').addEventListener('change', function() {
+            var language = this.value;
+            var translateElement = document.getElementById('google_translate_element');
+
+            if (typeof google !== 'undefined' && google.translate) {
+                google.translate.TranslateElement.prototype.hideBanner();
+                google.translate.TranslateElement.prototype.init({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,es,fr,de,it',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, translateElement);
+
+                var frame = document.querySelector('.goog-te-menu-frame');
+                if (frame) {
+                    var iframeDoc = frame.contentWindow.document;
+                    iframeDoc.querySelector('.goog-te-menu2-item span:contains("' + language + '")').click();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
