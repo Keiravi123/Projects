@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f0;
+    color: #4d004d;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffb6c1;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1em;
+    font-style: italic;
+}
+
+section {
+    background-color: #ffb6c1;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff0f5;
+}
+
+td {
+    border: 1px solid #cc6699;
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td img {
+    display: block;
+    margin: 8px auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #cc6699;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #cc6699;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b3477a;
+}
+
+a {
+    color: #800040;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+audio, img {
+    display: block;
+    margin: 15px auto;
+}
+
+footer {
+    background-color: #ffb6c1;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    td img {
+        width: 80px;
+    }
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
