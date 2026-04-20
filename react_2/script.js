@@ -15,4 +15,4 @@ const clone = image.cloneNode()
 
 favorites.appendChild(clone)
 
-}
+})
